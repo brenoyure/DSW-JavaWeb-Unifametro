@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
+    <script type="text/javascript" src="./scripts/script.js"></script>
     <title>Jogo do Maior Número</title>
 </head>
 
@@ -17,24 +18,24 @@
                 <h1 class="form-header">Jogo do Maior Número</h1>
                 
                 <label class="form-game-label" for="Numero1">1º: </label>
-                <input class="form-game-input" type="number" name="Numero1" id="Numero1">
+                <input required class="form-game-input" type="number" name="Numero1" id="Numero1" value="0">
 
                 <label class="form-game-label" for="Numero2">2º: </label>
-                <input class="form-game-input" type="number" name="Numero2" id="Numero2">
+                <input required class="form-game-input" type="number" name="Numero2" id="Numero2" value="0">
                 <br><br>
 
                 <label class="form-game-label" for="Numero3">3º: </label>
-                <input class="form-game-input" type="number" name="Numero3" id="Numero3">
+                <input required class="form-game-input" type="number" name="Numero3" id="Numero3" value="0">
 
                 <label class="form-game-label" for="Numero4">4º: </label>
-                <input class="form-game-input" type="number" name="Numero4" id="Numero4">
+                <input required class="form-game-input" type="number" name="Numero4" id="Numero4" value="0">
                 <br><br>
 
                 <label class="form-game-label" for="Numero5" id="Number5-label">5º: </label>
-                <input class="form-game-input" type="number" name="Numero5" id="Numero5">
+                <input required class="form-game-input" type="number" name="Numero5" id="Numero5" value="0">
                 <br><br>
 
-                <button class="form-button" type="submit">Enviar</button>
+                <button class="form-button" type="submit" onmouseover="myFunction()">Enviar</button>
                 <button class="form-button" type="reset">Limpar</button>
 
             </form>

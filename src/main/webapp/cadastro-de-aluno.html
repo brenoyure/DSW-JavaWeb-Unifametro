@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
+    <script type="text/javascript" src="./scripts/script.js"></script>
     <title>Cadastro de Aluno</title>
 </head>
 
@@ -13,19 +14,19 @@
 
     <div class="container">
         <div class="formulario">
-            <form action="" method="post">
+            <form action="" method="post" id="formulario-cadastro">
                 <h1 class="form-header">Formulário de Cadastro</h1>
 
                 <label class="form-label" for="nome">Nome: </label>
-                <input class="form-input" type="text" name="nome" id="nome" value="Breno Yuri">
+                <input required class="form-input" type="text" name="nome" id="nome" placeholder="Insira seu Nome">
                 <br><br>
 
                 <label class="form-label" for="idade">Idade: </label>
-                <input class="form-input" type="number" name="idade" id="idade" value="27">
+                <input required class="form-input" type="number" name="idade" id="idade" oninput="verificaIdade()" placeholder="Insira sua Idade">
                 <br><br>
 
-                <button class="form-button" type="submit">Enviar</button>
-                <button class="form-button" type="reset">Limpar</button>
+                <input class="form-button"  type="submit" value="Enviar">
+                <input class="form-button"  type="reset"  value="Limpar">
 
             </form>
         </div>

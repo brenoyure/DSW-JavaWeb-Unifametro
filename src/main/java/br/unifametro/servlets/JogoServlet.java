@@ -18,16 +18,46 @@ public class JogoServlet extends HttpServlet {
      * formulário de cadastro.
      */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)  throws ServletException, IOException {
         request.getRequestDispatcher("jogo.html").forward(request, response);
     }
 
     /**
-     * Método que recebe requisições Http do Tipo Post e cadastra o Aluno.
+     * Método que recebe os números, através de uma requisição Http do tipo Post e
+     * retorna o maior e menor número.
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //TODO Processar os Números
+
+        try {
+            int num1 = Integer.parseInt(request.getParameter("Numero1"));
+            int num2 = Integer.parseInt(request.getParameter("Numero2"));
+            int num3 = Integer.parseInt(request.getParameter("Numero3"));
+            int num4 = Integer.parseInt(request.getParameter("Numero4"));
+            int num5 = Integer.parseInt(request.getParameter("Numero5"));
+            int maior = num1;
+            int menor = num1;
+
+            int[] numeros = { num1, num2, num3, num4, num5 };
+
+            for (int numero : numeros) {
+
+                if (numero > maior)
+                    maior = numero;
+
+                if (numero < menor)
+                    menor = numero;
+
+            }
+
+        } catch (NumberFormatException e) {
+            response.sendRedirect("Jogo");
+        }
+
+        finally {
+            response.sendRedirect("Jogo");
+        }
+
     }
 
 }
