@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #333f4a;
+}
+
+.container {
+    display: inline-flexbox;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: calc(25vh - 1.5em);
+}
+
+.formulario {
+    display: inline-flex;
+    background: #43846a;
+    border-radius: 25px;
+    padding-bottom: 3em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.form-header {
+    background: rgb(42, 108, 75);
+    border-radius: 0.25em;
+    color: white;
+    padding: 0.5em;
+    margin: 1.5em;
+    margin-bottom: 1em;
+    
+}
+
+.form-label {
+    color: #1f345e;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.form-input {
+    font-size: 1.25em;
+    text-align: justify;
+}
+
+.form-button {
+    font-size: 1em;
+    background: orange;
+    border: 20px;
+    border-color: aquamarine;
+    offset-distance: 10px;
+    border-radius: 0.5em;
+    margin: 1em;
+    padding: 0.9em 2em 0.9em 2em;
+    font-weight: bold;
+
+}
