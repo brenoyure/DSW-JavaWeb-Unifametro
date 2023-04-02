@@ -42,7 +42,34 @@ body {
 
 .form-input {
     font-size: 1.25em;
-    text-align: justify;
+    text-align: center;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 5px;
+}
+
+.form-game-label {
+    color: #1f345e;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.form-game-input {
+    font-size: 1.25em;
+    text-align: center;
+    margin-right: 1.5em;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: brown;
+    width: 5em;
+}
+
+#Number5-label {
+    justify-content: left;
+    align-items: start;
+    text-align: left;
 }
 
 .form-button {
@@ -55,5 +82,6 @@ body {
     margin: 1em;
     padding: 0.9em 2em 0.9em 2em;
     font-weight: bold;
+    cursor: pointer;
 
 }
