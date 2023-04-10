@@ -10,12 +10,13 @@ body {
 }
 
 .container {
-  width: 95vw;
-  height: 80vh;
+  height: 30vw;
+  width: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1em;
 }
 
 .formulario {
@@ -87,35 +88,6 @@ body {
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
-}
-
-.container-links {
-  width: 32vw;
-  position: relative;
-  left: 31%;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  
-}
-
-.links-header {
-  background: rgb(42, 108, 75);
-  border-radius: 0.25em;
-  color: white;
-  width: fit-content;
-  margin: auto;
-  padding: 0.5em;
-}
-
-.links {
-  /* width: auto;
-  height: auto; */
-  height: 20vh;
-  text-align: center;
-  background: #43846a;
-  border-radius: 25px;
-  text-decoration: dotted;
 }
 
 .form-button:hover {
