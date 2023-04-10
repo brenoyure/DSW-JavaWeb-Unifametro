@@ -91,8 +91,12 @@ body {
 
 .container-links {
   width: 32vw;
-  position: absolute;
+  position: relative;
   left: 31%;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  
 }
 
 .links-header {
