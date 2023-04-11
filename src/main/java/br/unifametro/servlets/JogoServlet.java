@@ -83,37 +83,66 @@ public class JogoServlet extends HttpServlet {
 		
 		Aluno aluno = (Aluno) request.getSession().getAttribute("aluno");
 		
-		return String.format("<!DOCTYPE html>\n" + "<html lang=\"pt-BR\">\n" + "\n" + "<head>\n" + "    <meta charset=\"UTF-8\">\n"
-				+ "    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n"
-				+ "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
-				+ "    <link rel=\"stylesheet\" href=\"./styles/style.css\">\n"
-				+ "    <link rel=\"stylesheet\" href=\"./styles/jogo-links-container-styles.css\">\n"
-				+ "    <script type=\"text/javascript\" src=\"./scripts/script.js\"></script>\n"
-				+ "    <title>Jogo do Maior Número</title>\n" + "</head>\n" + "\n" + "<body>\n" + "\n"
-				+ "    <div class=\"container\">\n" + "        <div class=\"formulario\">\n"
-				+ "            <form action=\"\" method=\"post\">\n"
-				+ "                <h1 class=\"form-header\">Jogo do Maior Numero</h1>\n" + "\n"
-				+ "                <label class=\"form-game-label\" for=\"Numero1\">1: </label>\n"
-				+ "                <input required class=\"form-game-input\" type=\"number\" name=\"Numero1\" id=\"Numero1\" value=\"0\">\n"
-				+ "\n" + "                <label class=\"form-game-label\" for=\"Numero2\">2: </label>\n"
-				+ "                <input required class=\"form-game-input\" type=\"number\" name=\"Numero2\" id=\"Numero2\" value=\"0\">\n"
-				+ "                <br><br>\n" + "\n"
-				+ "                <label class=\"form-game-label\" for=\"Numero3\">3: </label>\n"
-				+ "                <input required class=\"form-game-input\" type=\"number\" name=\"Numero3\" id=\"Numero3\" value=\"0\">\n"
-				+ "\n" + "                <label class=\"form-game-label\" for=\"Numero4\">4: </label>\n"
-				+ "                <input required class=\"form-game-input\" type=\"number\" name=\"Numero4\" id=\"Numero4\" value=\"0\">\n"
-				+ "                <br><br>\n" + "\n"
-				+ "                <label class=\"form-game-label\" for=\"Numero5\" id=\"Number5-label\">5: </label>\n"
-				+ "                <input required class=\"form-game-input\" type=\"number\" name=\"Numero5\" id=\"Numero5\" value=\"0\">\n"
-				+ "                <br><br>\n" + "\n"
-				+ "                <button class=\"form-button\" type=\"submit\">Enviar</button>\n"
-				+ "                <button class=\"form-button\" type=\"reset\">Limpar</button>\n" + "\n"
-				+ "            </form>\n" + "        </div>\n" + "    </div>\n" + "\n"
-				+ "    <div class=\"links-container\">\n" + "        <div class=\"container-links\">\n"
-				+ "            <br>\n" + "            <h3 class=\"links-header\">" + "Jogador(a): %s | Idade: %d anos.</h3>\n" + "            <br>\n"
-				+ "            <a class=\"links\" href=\"CadastroAluno\">Alterar Cadastro do Jogador(a)</a>\n"
-				+ "            <a class=\"links\" href=\"/AP1-SW\">Pagina Inicial</a>\n" + "        </div>\n"
-				+ "    </div>\n" + "\n" + "\n" + "</body>\n" + "\n" + "</html>", aluno.getNome(), aluno.getIdade());
+		return String.format("""
+                                     <!DOCTYPE html>
+                                     <html lang="pt-BR">
+                                     
+                                     <head>
+                                         <meta charset="UTF-8">
+                                         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                                         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                         <link rel="stylesheet" href="./styles/style.css">
+                                         <link rel="stylesheet" href="./styles/jogo-links-container-styles.css">
+                                         <script type="text/javascript" src="./scripts/script.js"></script>
+                                         <title>Jogo do Maior N\u00famero</title>
+                                     </head>
+                                     
+                                     <body>
+                                     
+                                         <div class="container">
+                                             <div class="formulario">
+                                                 <form action="" method="post">
+                                                     <h1 class="form-header">Jogo do Maior Numero</h1>
+                                     
+                                                     <label class="form-game-label" for="Numero1">1: </label>
+                                                     <input required class="form-game-input" type="number" name="Numero1" id="Numero1" value="0">
+                                     
+                                                     <label class="form-game-label" for="Numero2">2: </label>
+                                                     <input required class="form-game-input" type="number" name="Numero2" id="Numero2" value="0">
+                                                     <br><br>
+                                     
+                                                     <label class="form-game-label" for="Numero3">3: </label>
+                                                     <input required class="form-game-input" type="number" name="Numero3" id="Numero3" value="0">
+                                     
+                                                     <label class="form-game-label" for="Numero4">4: </label>
+                                                     <input required class="form-game-input" type="number" name="Numero4" id="Numero4" value="0">
+                                                     <br><br>
+                                     
+                                                     <label class="form-game-label" for="Numero5" id="Number5-label">5: </label>
+                                                     <input required class="form-game-input" type="number" name="Numero5" id="Numero5" value="0">
+                                                     <br><br>
+                                     
+                                                     <button class="form-button" type="submit">Enviar</button>
+                                                     <button class="form-button" type="reset">Limpar</button>
+                                     
+                                                 </form>
+                                             </div>
+                                         </div>
+                                     
+                                         <div class="links-container">
+                                             <div class="container-links">
+                                                 <br>
+                                                 <h3 class="links-header">Jogador(a): %s | Idade: %d anos.</h3>
+                                                 <br>
+                                                 <a class="links" href="CadastroAluno">Alterar Cadastro do Jogador(a)</a>
+                                                 <a class="links" href="/AP1-SW">Pagina Inicial</a>
+                                             </div>
+                                         </div>
+                                     
+                                     
+                                     </body>
+                                     
+                                     </html>""", aluno.getNome(), aluno.getIdade());
 	}
 
 }

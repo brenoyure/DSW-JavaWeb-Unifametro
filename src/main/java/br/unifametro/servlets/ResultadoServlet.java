@@ -28,48 +28,46 @@ public class ResultadoServlet extends HttpServlet {
 		int menor = resultado[0];
 		int maior = resultado[1];
 		
-		return format(
-				"<!DOCTYPE html>\n"
-				+ "<html lang=\"pt-BR\">\n"
-				+ "\n"
-				+ "<head>\n"
-				+ "    <meta charset=\"UTF-8\">\n"
-				+ "    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n"
-				+ "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
-				+ "    <link rel=\"stylesheet\" href=\"./styles/resultado-container-styles.css\">\n"
-				+ "    <link rel=\"stylesheet\" href=\"./styles/style.css\">\n"
-				+ "    <script type=\"text/javascript\" src=\"./scripts/script.js\"></script>\n"
-				+ "    <title>Resultado</title>\n"
-				+ "</head>\n"
-				+ "\n"
-				+ "<body>\n"
-				+ "\n"
-				+ "    <div class=\"container\">\n"
-				+ "\n"
-				+ "        <div class=\"links-container\">\n"
-				+ "\n"
-				+ "            <div class=\"container-links\">\n"
-				+ "\n"
-				+ "                <div class=\"container-resultado\">\n"
-				+ "                    <h2 class=\"resultado-header\">Resultado</h2>\n"
-				+ "                    <label class=\"form-label\">Menor Numero: <span>%d</span></label>\n"
-				+ "                    <label class=\"form-label\">Maior Numero: <span>%d</span></label>\n"
-				+ "                </div>\n"
-				+ "                <h2 class=\"links-header\">Opcoes</h2>\n"
-				+ "                <a class=\"links\" href=\"/AP1-SW\">Pagina Inicial</a>\n"
-				+ "                <a class=\"links\" href=\"Jogo\">Jogar Novamente</a>\n"
-				+ "            </div>\n"
-				+ "\n"
-				+ "        </div>\n"
-				+ "\n"
-				+ "    </div>\n"
-				+ "\n"
-				+ "\n"
-				+ "</body>\n"
-				+ "\n"
-				+ "</html>"
-				
-				, menor, maior);
+		return format("""
+                              <!DOCTYPE html>
+                              <html lang="pt-BR">
+                              
+                              <head>
+                                  <meta charset="UTF-8">
+                                  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                  <link rel="stylesheet" href="./styles/resultado-container-styles.css">
+                                  <link rel="stylesheet" href="./styles/style.css">
+                                  <script type="text/javascript" src="./scripts/script.js"></script>
+                                  <title>Resultado</title>
+                              </head>
+                              
+                              <body>
+                              
+                                  <div class="container">
+                              
+                                      <div class="links-container">
+                              
+                                          <div class="container-links">
+                              
+                                              <div class="container-resultado">
+                                                  <h2 class="resultado-header">Resultado</h2>
+                                                  <label class="form-label">Menor Numero: <span>%d</span></label>
+                                                  <label class="form-label">Maior Numero: <span>%d</span></label>
+                                              </div>
+                                              <h2 class="links-header">Opcoes</h2>
+                                              <a class="links" href="/AP1-SW">Pagina Inicial</a>
+                                              <a class="links" href="Jogo">Jogar Novamente</a>
+                                          </div>
+                              
+                                      </div>
+                              
+                                  </div>
+                              
+                              
+                              </body>
+                              
+                              </html>""", menor, maior);
 	}
 	
 }
